@@ -7,7 +7,7 @@ function AlertMessage(){
     const {alert} = useContext(ContextTheme);
 
     console.log(alert)
-    return <Alert variant={'success'} className={'d-block alertMessage'}>
+    return <Alert variant={'success'} className={alert.length ? 'd-block alertMessage' : 'd-none'}>
         {alert}
     </Alert>
 }
